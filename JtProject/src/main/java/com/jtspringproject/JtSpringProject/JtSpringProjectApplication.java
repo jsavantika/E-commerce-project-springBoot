@@ -12,3 +12,10 @@ public class JtSpringProjectApplication {
 	}
 
 }
+public class LambdaRequestHandler
+  implements RequestHandler<String, String> {
+    public String handleRequest(String input, Context context) {
+        context.getLogger().log("Input: " + input);
+        return "Hello World - " + input;
+    }
+}
